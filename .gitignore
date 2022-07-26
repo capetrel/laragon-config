@@ -1,0 +1,23 @@
+# Ignore everything
+*
+
+# But not these files...
+!./.gitignore
+!./readme.md
+# etc...
+
+# ...even if they are in subdirectories
+!*/
+
+# if the files to be tracked are in subdirectories
+!bin/apache/httpd2.4/conf/httpd.conf
+!bin/laragon/tpl/openssl.conf.tpl
+!bin/mysql/mariadb10/my.ini
+!bin/php/php8.1/php.ini
+
+
+!etc/ssl/auto.openssl.conf
+!etc/apache2/httpd-ssl.conf
+!etc/apache2/sites-enabled/00-default.conf
+
+!usr/tpl/openssl.conf.tpl

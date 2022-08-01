@@ -43,6 +43,24 @@ L'inconvénient, c'est que la mise à jour de chaque programme doit se faire man
 
 On peut se servir du fichier /usr/packages.conf pour récupérer la dernière version des programmes, il suffit de remplacer les liens de téléchargement par ceux en version 'latest'
 
+
+## Cas particulier de MariaDB
+
+Le fichier de configuration de MariaDB (et mySQL) et modifié par Laragon. Dans le cas d'un changement majeur de version (10.7 -> 10.8) il faudra faire un dump de toutes les bases de l'ancienne version pour les réinjecter dans la nouvelle version.
+
+
+## Application
+Laragon inclus quelques applications dans le dossier /etc/apps. Elles sont accessibles depuis la page root de laragon (/www/index.php -> http://localhost), et se situe dans le dossier /etc/apps.
+ - [adminer](https://www.adminer.org/)
+ - laragon : code fournit avec Laragon permet de téléverser des fichiers dans le dossier /etc/apps/laragon/uploads
+ - [memcached](https://memcached.org/)
+ - [phpMyAdmin](https://www.phpmyadmin.net/)
+ - [phpRedisAdmin](https://github.com/erikdubbelboer/phpRedisAdmin)
+
+Il faut les mettre à jour en fonction des versions d'Apache / PHP / MariaDB installé. Pour phpMyAdmin et phpRedisAdmin il y a des fichiers de configuration : /etc/apps/phpMyAdmin/config.inc.php et /etc/apps/phpRedisAdmin/includes/config.inc.php. Pensez à les conserver ou reproduire leur config.
+
+Si besoin on peut ajouter des applications dans ce dossier, il faut créer un nouveau dossier au nom de l'appli /etc/apps/example et ajouter un VHost dans /etc/apache2/alias/example.conf. Il suffit ensuite de s'inspirer d'un des fichiers .conf.
+
 ## HTTPS et HTTP2
 
 ### HTTPS

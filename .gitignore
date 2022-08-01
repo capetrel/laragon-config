@@ -29,16 +29,28 @@ bin/php/php8.1/*
 
 /data/
 
-/etc
-!etc/ssl/auto.openssl.conf
+etc/*
+!etc/apache2
+etc/apache2/*
 !etc/apache2/httpd-ssl.conf
-!etc/apache2/sites-enabled/00-default.conf
+!etc/apache2/alias
+etc/apache2/alias/*
+!etc/apache2/alias/example.conf
+
+!etc/apps
+etc/apps/*
+!etc/apps/example
+
+!etc/ssl
+etc/ssl/*
+!etc/ssl/auto.openssl.conf
 
 /tmp
 
 /usr
 !usr/tpl/openssl.conf.tpl
 
-/www
+www/*
+!www/index.php
 
 /laragon.exe

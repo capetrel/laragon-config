@@ -1,23 +1,44 @@
-# Ignore everything
-*
+.idea
+.vscode
 
-# But not these files...
-!./.gitignore
-!./readme.md
-# etc...
+bin/*
+!bin/apache
+bin/apache/*
+!bin/apache/httpd-2.4
+bin/apache/httpd-2.4/*
+!bin/apache/httpd-2.4/conf
+bin/apache/httpd-2.4/conf/*
+!bin/apache/httpd-2.4/conf/httpd.conf
+bin/apache/httpd-2.4/conf/extra/*
+!bin/apache/httpd-2.4/conf/extra/httpd-ssl.conf
 
-# ...even if they are in subdirectories
-!*/
-
-# if the files to be tracked are in subdirectories
-!bin/apache/httpd2.4/conf/httpd.conf
+bin/laragon/*
+!bin/laragon/tpl
+bin/laragon/tpl/*
 !bin/laragon/tpl/openssl.conf.tpl
-!bin/mysql/mariadb10/my.ini
-!bin/php/php8.1/php.ini
 
+bin/mysql/*
+!bin/mysql/mariadb-10.7
+bin/mysql/mariadb-10.7/*
+!bin/mysql/mariadb-10.7/my.ini
 
+bin/php/*
+!bin/php/php8.1
+bin/php/php8.1/*
+!bin/php/php8.1/phpini
+
+/data/
+
+/etc
 !etc/ssl/auto.openssl.conf
 !etc/apache2/httpd-ssl.conf
 !etc/apache2/sites-enabled/00-default.conf
 
+/tmp
+
+/usr
 !usr/tpl/openssl.conf.tpl
+
+/www
+
+/laragon.exe
